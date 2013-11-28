@@ -1,0 +1,5 @@
+# handle line endings, store LF convert automatically on checkout if needed
+* text
+*.png binary
+*.jpg binary
+*.jpeg binary
