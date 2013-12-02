@@ -11,7 +11,15 @@
   <body>
     <?php include 'includes/header.php'; ?>
 
-    <!-- insert markup -->
+    <div class="container">
+      <section class="main">
+        <!-- insert markup -->
+      </section>
+
+      <?php if (isset($cart)) { ?>
+        <?php include 'includes/sidebar.php'; ?>
+      <?php } ?>
+    </div>
 
     <?php include 'includes/footer.php'; ?>
     <?php include 'includes/scripts.php'; ?>
