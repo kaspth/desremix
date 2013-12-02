@@ -53,6 +53,13 @@
 }
 
 /* global styles */
+/* Color values:
+  green: #c2e2d3;
+  blue: #8789b2;
+  red: #d87e76;
+  gray: #727272;
+  black: #3d3d3d;
+*/
 /* http://mystrd.at/modern-clean-css-sticky-footer/ */
 html {
   position: relative;
@@ -61,9 +68,8 @@ html {
 
 body {
   font: 16px "Avenir", "Helvetica";
-  background-color: #efefef;
   color: #333;
-  margin: 0 0 150px; /* match footer height */
+  margin: 0 0 80px; /* match footer height */
 }
 
 .logo img {
@@ -72,9 +78,15 @@ body {
 
 #application-header {
   position: relative;
-  background-color: #4aac48;
   height: 54px;
   padding: 6px;
+}
+
+section.sidebar {
+  float: right;
+  border-left: 1px #727272 solid;
+  padding: 20px;
+  height: 100%;
 }
 
 /* footer */
@@ -83,38 +95,24 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 150px;
+  height: 80px;
   font-size: 80%;
-  color: #efefef;
-  background-color: #4aac48;
+  text-align: center;
+  color: #eee;
+  background-color: #3d3d3d;
 }
 
-.footer-links, address.footer {
+footer li, footer p {
   display: inline-block;
-  padding: 16px;
+  padding: 10px;
 }
 
-.footer-links {
-  float: left;
-  width: 150px;
-}
-
-.footer-links a {
+footer a {
   color: inherit;
-}
-
-.copyright {
-  margin: 18px 15px 0;
-  padding: 20px 0 0;
 }
 
 .hidden {
   display: none;
-}
-
-.center-section {
-  margin: 20px auto;
-  text-align: center;
 }
 
 .title {
@@ -153,54 +151,24 @@ footer {
 }
 
 .back-redirect::before {
-  content: "←"; /* find html encoded version */
+  content: "←";
   display: inline-block;
   position: relative;
   right: 5px;
 }
 
-.background {
+div.background {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 10px 0;
-  background-color: rgb(207, 207, 207); /* #cfcfcf */
-  background-color: rgba(207, 207, 207, 0.7);
+  padding: 10px 8px;
+  background-color: rgb(114, 114, 114); /* #727272 */
+  background-color: rgba(114, 114, 114, 0.7);
 }
 
-.dark {
-  background-color: rgb(51, 51, 51);
-  background-color: rgba(51, 51, 51, 0.7);
-}
-
-.dark * {
+div.background * {
   color: #eee;
-}
-
-.product-listing {
-  position: relative;
-  overflow: hidden;
-  max-width: 500px;
-  max-height: 200px;
-}
-
-.products {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.product-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.product-banner-image {
-  width: 100%;
-}
-
-.right {
-  float: right;
 }
 
 .crop {
@@ -210,6 +178,21 @@ footer {
 }
 
 .crop img {
+  width: 100%;
+  height: auto;
+}
+
+article.product {
+  position: relative;
+  width: 200px;
+  overflow: hidden;
+}
+
+article.product a {
+  color: inherit;
+}
+
+article.product img {
   width: 100%;
   height: auto;
 }

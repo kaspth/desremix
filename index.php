@@ -14,13 +14,13 @@ $products = fetch_products();
     <?php include 'includes/header.php'; ?>
 
     <div class="container">
+      <?php include 'includes/sidebar.php'; ?>
+      
       <section class="main">
         <?php echo render($products, 'product', function() { ?>
           <h1>No products found.</h1>
         <?php }); ?>
       </section>
-
-      <?php include 'includes/sidebar.php'; ?>
     </div>
 
     <?php include 'includes/footer.php'; ?>

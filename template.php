@@ -12,13 +12,11 @@
     <?php include 'includes/header.php'; ?>
 
     <div class="container">
+      <?php include 'includes/sidebar.php'; ?>
+      
       <section class="main">
         <!-- insert markup -->
       </section>
-
-      <?php if (isset($cart)) { ?>
-        <?php include 'includes/sidebar.php'; ?>
-      <?php } ?>
     </div>
 
     <?php include 'includes/footer.php'; ?>
