@@ -13,4 +13,13 @@ $(document).ready(function() {
       el.find(revealSelector).fadeIn(speed);
     });
   };
+
+  $('[data-add-to-cart]').on('click', function(e) {
+    e.preventDefault();
+    var id = $(this).closest('article.product').data('id');
+
+    $.post('cart.php', { 'product_id': id }, function(html) {
+      $('.cart').empty().append(html);
+    });
+  });
 });

@@ -1,4 +1,6 @@
-<article class="product" data-hover-replace>
+<article class="product"
+  data-hover-replace data-id="<?php echo $product['id']; ?>"
+>
   <a href="product.php?id=<?php echo $product["id"]; ?>">
     <img src="<?php echo $product["image_url"]; ?>" alt="<?php echo $product["name"]; ?>">
     <div class="background">

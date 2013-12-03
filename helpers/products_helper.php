@@ -21,8 +21,8 @@ function find_product_by($key, $value) {
   return $found_product;
 }
 
-function each_products($operation) {
-  $products = fetch_product();
+function each_product($operation) {
+  $products = fetch_products();
   if (!isset($products)) return;
 
   foreach ($products as $product)
