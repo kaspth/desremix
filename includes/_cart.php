@@ -2,14 +2,18 @@
   <h1>Your Cart</h1>
 </header>
 
-<table>
-  <thead>
-    <th>Antal</th>
-    <th>Produkter</th>
-    <th>Pris</th>
-  </thead>
+<?php if (!isset($cart['line_items'])) { ?>
+  <h3>Your cart is empty.</h3>
+<?php else ?>
+  <table>
+    <thead>
+      <th>Antal</th>
+      <th>Produkter</th>
+      <th>Pris</th>
+    </thead>
 
-  <tbody>
-    <?php render($cart['line_items'], 'line_item'); ?>
-  </tbody>
-</table>
+    <tbody>
+      <?php echo render($cart['line_items'], 'line_item'); ?>
+    </tbody>
+  </table>
+<?php } ?>

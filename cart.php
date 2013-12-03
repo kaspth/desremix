@@ -8,8 +8,8 @@ if (isset($_POST)) {
   extract($_POST);
   $render_fragment = true;
 
-  $cart = current_cart();
-  add_product_id_to_cart($cart, $product_id);
+  add_product_id_to_current_cart($product_id);
 }
+$cart = current_cart();
 ?>
 <?php echo render($cart, 'cart'); ?>

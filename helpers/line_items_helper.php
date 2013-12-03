@@ -1,19 +1,27 @@
 <?php
 
-function update_line_item_for_product($line_items, $product) {
-  if (!isset($line_items)) return;
+function update_line_items($line_items, $product) {
+  if (!isset($product)) return $line_items;
 
-  $exists = line_items_has_product($line_items, $product);
-  if (isset($exists))
-    increment_line_item($line_item);
+  if (!isset($line_items))
+    $line_items = array();
+
+  $index = line_items_has_product($line_items, $product);
+  echo $index;
+  if (isset($index))
+    $line_items[$index] = increment_line_item($line_items[$index]);
   else
     $line_items[] = build_line_item($product);
+
+  return $line_items;
 }
 
 function line_items_has_product($line_items, $product) {
-  foreach ($line_items as $line_item)
+  if (count($line_items) == 0) return null;
+
+  foreach ($line_items as $i => $line_item)
     if ($line_item['product_id'] == $product['id'])
-      return $line_item;
+      return $i;
 
   return null;
 }

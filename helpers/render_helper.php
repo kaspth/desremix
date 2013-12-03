@@ -10,26 +10,34 @@ function render($objects, $partial_name, $null_function = null) {
   if (!isset($objects))
     return isset($null_function) ? $null_function() : false;
 
-  if (is_array($objects))
+  if (is_numeric_array($objects))
     return render_collection($objects, $partial_name, $null_function);
 
   return render_member($objects, $partial_name, $null_function);
 }
 
 function render_collection($objects, $partial_name) {
-  $rendered = array();
   foreach ($objects as $object)
-      $rendered[] = render_member($object, $partial_name);
-
-  return $rendered;
+    render_member($object, $partial_name);
 }
 
 function render_member($object, $partial_name) {
   eval("\${$partial_name} = \$object;"); # $product = $object;
-  return include(partial_path($partial_name));
+  include(partial_path($partial_name));
 }
 
 function partial_path($name) {
   return PARTIALS_DIR . PARTIALS_PREFIX . $name . '.php';
+}
+
+function is_numeric_array($array) {
+  if (!is_array($array)) return false;
+
+  $keys = array_keys($array);
+  return ($keys === array_keys($keys));
+  // for (reset($array), $i = 0; $i < count($array); next($array), $i++)
+  //   if ($i !== key($array)) return false;
+  //
+  // return true;
 }
 ?>
