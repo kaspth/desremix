@@ -2,7 +2,7 @@
   <header>
     <h1>Shopping cart</h1>
   </header>
-  
+
   <table>
     <thead>
       <th>Antal</th>
@@ -11,7 +11,7 @@
     </thead>
 
     <tbody>
-      <?php render($line_items, 'line_item'); ?>
+      <?php render($cart['line_items'], 'line_item'); ?>
     </tbody>
   </table>
 </section>
