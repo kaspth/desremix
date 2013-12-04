@@ -203,6 +203,12 @@ div.background button:hover {
   background-color: #8789b2;
 }
 
+div.background button {
+  float: right;
+  position: relative;
+  right: 15px;
+}
+
 .crop {
   position: relative;
   max-height: 220px;

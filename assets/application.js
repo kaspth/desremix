@@ -1,18 +1,9 @@
 $(document).ready(function() {
-  $('[data-replacement]').hide();
+  $('[data-hover-show]').hide();
 
-  $('[data-hover-replace]').on('mouseenter', function() {
-    fadeAndRevealOn($(this), '[data-replace]', '[data-replacement]');
-  }).on('mouseleave', function() {
-    fadeAndRevealOn($(this), '[data-replacement]', '[data-replace]');
+  $('[data-hover-effect]').hover(function() {
+    $(this).find('[data-hover-show]').fadeToggle(200);
   });
-
-  var fadeAndRevealOn = function(el, fadeSelector, revealSelector, speed) {
-    if (!speed) speed = 200;
-    el.find(fadeSelector).fadeOut(speed, function() {
-      el.find(revealSelector).fadeIn(speed);
-    });
-  };
 
   $('[data-add-to-cart]').on('click', function(e) {
     e.preventDefault();
