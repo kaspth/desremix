@@ -1,0 +1,40 @@
+<?php
+
+include_once 'render_helper.php';
+include_once 'line_items_helper.php';
+include_once 'cart_helper.php';
+
+function build_json_response($type, $line_item, $index = null) {
+  $response = array(
+    'cartUpdateType' => $type,
+    'html' => render_inline($line_item, 'line_item')
+  );
+  if (isset($index)) $response['updatedLineItemIndex'] = $index;
+  return json_encode($response);
+}
+
+function json_response_for_product($product) {
+  $cart = current_cart();
+  $line_items = $cart['line_items'];
+
+  $index = line_items_has_product($line_items, $product);
+  $line_item = increment_or_create_item($line_items[$index], $product);
+  if (isset($index)) {
+    $line_items[$index] = $line_item;
+    $type = 'update';
+  } else {
+    $line_items[] = $line_item;
+    $type = 'add';
+  }
+
+  $cart['line_items'] = $line_items;
+  update_cart($cart);
+
+  return build_json_response($type, $line_item, $index);
+}
+
+function increment_or_create_item($item, $product) {
+  return isset($item) ? increment_line_item($item) : build_line_item($product);
+}
+
+?>
