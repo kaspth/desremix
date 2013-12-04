@@ -196,3 +196,17 @@ article.product img {
   width: 100%;
   height: auto;
 }
+
+table {
+  border-collapse: collapse;
+  margin: 15px;
+}
+
+th {
+  border-bottom: 2px solid #727272;
+  text-align: left;
+}
+
+th, td {
+  padding: 4px 8px;
+}

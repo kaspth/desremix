@@ -7,9 +7,9 @@
 <?php } else { ?>
   <table>
     <thead>
-      <th>Antal</th>
-      <th>Produkter</th>
-      <th>Pris</th>
+      <th>Pieces</th>
+      <th>Name</th>
+      <th>Price</th>
     </thead>
 
     <tbody>
