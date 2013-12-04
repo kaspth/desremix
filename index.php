@@ -1,7 +1,9 @@
 <?php
 include_once 'helpers/products_helper.php';
 include_once 'helpers/render_helper.php';
+include_once 'helpers/cart_helper.php';
 
+$cart = current_cart();
 $products = fetch_products();
 ?>
 <!DOCTYPE html>
@@ -15,7 +17,7 @@ $products = fetch_products();
 
     <div class="container">
       <?php include 'includes/sidebar.php'; ?>
-      
+
       <section class="main">
         <?php echo render($products, 'product', function() { ?>
           <h1>No products found.</h1>
