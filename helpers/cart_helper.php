@@ -6,11 +6,9 @@ if (session_status() == PHP_SESSION_NONE)
 include_once 'products_helper.php';
 include_once 'line_items_helper.php';
 
-function add_product_id_to_current_cart($product_id) {
-  $cart = current_cart();
-  $product = fetch_product_by_id($product_id);
-  $cart['line_items'] = update_line_items($cart['line_items'], $product);
-  update_cart($cart);
+function cart_is_empty($cart) {
+  $items = $cart['line_items'];
+  return !isset($items) && count($items) == 0;
 }
 
 function update_cart($cart) {

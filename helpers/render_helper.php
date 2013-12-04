@@ -26,6 +26,13 @@ function render_member($object, $partial_name) {
   include(partial_path($partial_name));
 }
 
+function render_inline($object, $partial_name) {
+  eval("\${$partial_name} = \$object;"); # $product = $object;
+  ob_start();
+  include(partial_path($partial_name));
+  return ob_get_clean();
+}
+
 function partial_path($name) {
   return PARTIALS_DIR . PARTIALS_PREFIX . $name . '.php';
 }

@@ -18,8 +18,27 @@ $(document).ready(function() {
     e.preventDefault();
     var id = $(this).closest('article.product').data('id');
 
-    $.post('cart.php', { 'product_id': id }, function(html) {
-      $('.cart').empty().append(html);
-    });
+    $.post('cart.php', { 'product_id': id }, function(update) {
+      var affectedLineItem = function() {
+        return $('.cart tbody').find('tr').eq(update.updatedLineItemIndex);
+      };
+
+      switch (update.cartUpdateType) {
+        case 'add':
+          var cart = $('.cart');
+          if (cart.find('tbody').length === 0)
+            cart.load('cart.php');
+          else
+            cart.find('tbody:last').append(update.html);
+
+          break;
+        case 'update':
+          affectedLineItem().replaceWith(update.html);
+          break;
+        case 'remove':
+          affectedLineItem().remove();
+          break;
+      }
+    }, 'json');
   });
 });

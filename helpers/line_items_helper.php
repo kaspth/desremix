@@ -29,6 +29,7 @@ function line_items_has_product($line_items, $product) {
 function increment_line_item($line_item) {
   $line_item['count']++;
   $line_item['total_price'] = $line_item['price'] * $line_item['count'];
+  return $line_item;
 }
 
 function build_line_item($product) {

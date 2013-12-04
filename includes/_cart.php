@@ -2,9 +2,9 @@
   <h1>Your Cart</h1>
 </header>
 
-<?php if (!isset($cart['line_items'])) { ?>
+<?php if (cart_is_empty($cart)) { ?>
   <h3>Your cart is empty.</h3>
-<?php else ?>
+<?php } else { ?>
   <table>
     <thead>
       <th>Antal</th>
