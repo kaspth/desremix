@@ -41,4 +41,11 @@ $(document).ready(function() {
       }
     }, 'json');
   });
+
+  $('.cart').on('click', '[data-empty-cart]', function(e) {
+    e.preventDefault();
+    $.post('cart.php', { 'empty': true }, function(data) {
+      $('.cart').empty().append(data);
+    });
+  });
 });

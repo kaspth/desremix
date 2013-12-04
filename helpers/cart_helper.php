@@ -3,9 +3,6 @@
 if (session_status() == PHP_SESSION_NONE)
   session_start();
 
-include_once 'products_helper.php';
-include_once 'line_items_helper.php';
-
 function cart_is_empty($cart) {
   return empty($cart['line_items']);
 }
