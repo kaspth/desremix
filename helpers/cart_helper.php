@@ -7,8 +7,7 @@ include_once 'products_helper.php';
 include_once 'line_items_helper.php';
 
 function cart_is_empty($cart) {
-  $items = $cart['line_items'];
-  return !isset($items) && count($items) == 0;
+  return empty($cart['line_items']);
 }
 
 function update_cart($cart) {
