@@ -86,6 +86,15 @@ table {
   margin: 20px 0;
 }
 
+tbody tr {
+  transition: all 0.2s ease-in-out;
+}
+
+tbody tr:hover {
+  color: #fafafa;
+  background-color: #3d3d3d;
+}
+
 th {
   border-bottom: 2px solid #3d3d3d;
   text-align: left;
@@ -93,6 +102,10 @@ th {
 
 th, td {
   padding: 4px 8px;
+}
+
+td:first-child {
+  text-align: center;
 }
 
 button {
