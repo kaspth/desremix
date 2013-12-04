@@ -87,7 +87,7 @@ table {
 }
 
 th {
-  border-bottom: 2px solid #727272;
+  border-bottom: 2px solid #3d3d3d;
   text-align: left;
 }
 
@@ -95,9 +95,24 @@ th, td {
   padding: 4px 8px;
 }
 
+button {
+  padding: 6px 10px;
+  background-color: transparent;
+  color: #3d3d3d;
+  border: 1px solid #3d3d3d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  color: #fafafa;
+  background-color: #3d3d3d;
+}
+
 section.sidebar {
   float: right;
-  border-left: 1px #727272 solid;
+  border-left: 1px #3d3d3d solid;
   padding: 30px;
 }
 
@@ -136,21 +151,6 @@ footer a {
   display: none;
 }
 
-button {
-  padding: 6px 10px;
-  background-color: transparent;
-  color: #fcfcfc;
-  border: 1px solid;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-button:hover {
-  border-color: #c2e2d3;
-  color: #c2e2d3;
-}
-
 .forward-redirect, .back-redirect {
   color: inherit;
   display: block;
@@ -181,8 +181,13 @@ div.background {
   background-color: rgba(114, 114, 114, 0.7);
 }
 
-div.background *:not(button) {
+div.background * {
   color: #eee;
+  border-color: #eee;
+}
+
+div.background button:hover {
+  background-color: #8789b2;
 }
 
 .crop {
