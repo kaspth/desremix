@@ -43,12 +43,12 @@
  }
 
 /* clearfix */
-.group:before, .group:after {
+.container:before, .container:after {
   content: "";
   display: table;
 }
 
-.group:after {
+.container:after {
   clear: both;
 }
 
@@ -82,11 +82,32 @@ body {
   padding: 6px;
 }
 
+table {
+  margin: 20px 0;
+}
+
+th {
+  border-bottom: 2px solid #727272;
+  text-align: left;
+}
+
+th, td {
+  padding: 4px 8px;
+}
+
 section.sidebar {
   float: right;
   border-left: 1px #727272 solid;
-  padding: 20px;
-  height: 100%;
+  padding: 30px;
+}
+
+section.sidebar h1 {
+  font-size: 170%;
+  font-weight: bold;
+}
+
+section.sidebar h3 {
+  font-size: 120%;
 }
 
 /* footer */
@@ -115,26 +136,19 @@ footer a {
   display: none;
 }
 
-.title {
-  font-size: 200%;
-  text-align: center;
-  padding: 10px;
-  border-bottom: 4px solid #c4c4c4;
-}
-
-.subtitle {
-  font-size: 150%;
-  padding: 8px 15px;
-}
-
-.button {
-  padding: 10px;
-  font-size: 120%;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: #3e414c;
+button {
+  padding: 6px 10px;
+  background-color: transparent;
   color: #fcfcfc;
+  border: 1px solid;
   border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  border-color: #c2e2d3;
+  color: #c2e2d3;
 }
 
 .forward-redirect, .back-redirect {
@@ -184,8 +198,10 @@ div.background *:not(button) {
 
 article.product {
   position: relative;
+  float: left;
   width: 200px;
   overflow: hidden;
+  margin: 10px 15px;
 }
 
 article.product a {
@@ -195,18 +211,4 @@ article.product a {
 article.product img {
   width: 100%;
   height: auto;
-}
-
-table {
-  border-collapse: collapse;
-  margin: 15px;
-}
-
-th {
-  border-bottom: 2px solid #727272;
-  text-align: left;
-}
-
-th, td {
-  padding: 4px 8px;
 }
