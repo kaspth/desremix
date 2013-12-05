@@ -6,3 +6,7 @@ task :validate, :uri do |t, args|
   PatternValidator.validate('./assets', '*.css', print_errors: true, validates_css: true)
   RemoteValidator.validate(args[:uri], '.', '*.php', print_errors: true)
 end
+
+task :fetch_info do
+  `ruby scripts/fetch_info.rb`
+end
