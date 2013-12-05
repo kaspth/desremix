@@ -236,3 +236,29 @@ article.product img {
   width: 100%;
   height: auto;
 }
+
+section.product div.information {
+  display: inline-block;
+  position: absolute;
+  margin: 0 20px;
+  width: 330px;
+}
+
+section.product h1 {
+  font-size: 200%;
+}
+
+section.product h3 {
+  font-size: 120%;
+  position: absolute;
+  right: 5px;
+  top: 15px;
+}
+
+section.product p {
+  margin: 20px 0;
+}
+
+section.product button {
+  float: right;
+}

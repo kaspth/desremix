@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   $('[data-add-to-cart]').on('click', function(e) {
     e.preventDefault();
-    var id = $(this).closest('article.product').data('id');
+    var id = $(this).closest('.product').data('id');
 
     $.post('cart.php', { 'product_id': id }, function(update) {
       var affectedLineItem = function() {
