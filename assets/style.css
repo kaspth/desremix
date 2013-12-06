@@ -194,7 +194,7 @@ section.products {
 
 article.product {
   position: relative;
-  height: 395px;
+  height: 400px;
   -webkit-flex-basis: 240px;
   overflow: hidden;
   margin: 10px;
