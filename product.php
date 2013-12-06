@@ -28,7 +28,7 @@ $cart = current_cart();
           <div class="information">
             <header>
               <h1><?php echo $product["name"]; ?></h1>
-              <h3><?php echo $product["price"]; ?> kr.</h3>
+              <h3>DKK <?php echo $product["price"]; ?></h3>
             </header>
 
             <p><?php echo $product["description"]; ?></p>

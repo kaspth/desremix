@@ -7,6 +7,6 @@
   <div class="background">
     <button data-hover-show data-add-to-cart>Læg i kurv</button>
     <h3><?php echo $product["name"]; ?></h3>
-    <em><?php echo $product["price"]; ?> kr.</em>
+    <em>DKK <?php echo $product["price"]; ?></em>
   </div>
 </article>
