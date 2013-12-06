@@ -1,6 +1,10 @@
 <?php
 # include helpers
 # setup needed variables for the page
+include_once 'helpers/render_helper.php';
+include_once 'helpers/cart_helper.php';
+
+$cart = current_cart();
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +17,7 @@
 
     <div class="container">
       <?php include 'includes/sidebar.php'; ?>
-      
+
       <section class="main">
         <!-- insert markup -->
       </section>
