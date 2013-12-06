@@ -19,9 +19,11 @@ $products = fetch_products();
       <?php include 'includes/sidebar.php'; ?>
 
       <section class="main">
-        <?php echo render($products, 'product', function() { ?>
-          <h1>No products found.</h1>
-        <?php }); ?>
+        <section class="products">
+          <?php echo render($products, 'product', function() { ?>
+            <h1>No products found.</h1>
+          <?php }); ?>
+        </section>
       </section>
     </div>
 

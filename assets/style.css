@@ -82,12 +82,6 @@ body {
   padding: 6px;
 }
 
-section.main {
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
-  -webkit-justify-content: flex-start;
-}
-
 table {
   margin: 20px 0;
 }
@@ -192,15 +186,10 @@ div.background button {
   right: 15px;
 }
 
-.crop {
-  position: relative;
-  max-height: 220px;
-  overflow: hidden;
-}
-
-.crop img {
-  width: 100%;
-  height: auto;
+section.products {
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
 }
 
 article.product {
