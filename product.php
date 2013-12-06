@@ -23,7 +23,7 @@ $cart = current_cart();
 
       <section class="main">
         <section class="product" data-id="<?php echo $product['id']; ?>">
-          <img src="<?php echo $product['image_url'] ?>" alt="<?php echo $product['name']; ?>">
+          <?php echo product_image_tag($product); ?>
 
           <div class="information">
             <header>

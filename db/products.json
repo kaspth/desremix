@@ -3,7 +3,6 @@
   "id": 1,
   "name": "Tilda",
   "price": 1400.00,
-  "image_url": "http://placekitten.com/500",
   "short_description": "Wool and cashmere-blend coat",
   "description": "Enter spring in this seasons catwalk trend of pastels. Designers Remix coat TILDA is classic with its long silhuette and luxurious cashmere wool blend. Create a stylish spring look with the wool knit STACY, the short LARASKIRT and fashionable DINA boots.",
   "additional_info": [["Color","54A CORAL"],["Material","70% Wool, 20% Polyamide, 10% Cashmere"],["Delivery time","1-3 days"]]
@@ -12,7 +11,6 @@
   "id": 2,
   "name": "Marley",
   "price": 800.00,
-  "image_url": "http://placekitten.com/500",
   "short_description": "Silk dress",
   "description": "Designers Remix crepe de chinesilk dress MARLEY is a modern version of the little black dress with its unique design and loose fit. Pair it with a leather clutch and statement necklace for a powerful party look.",
   "additional_info": [["Color","BLACK"],["Material","100% Silk"],["Delivery time","1-3 days"]]
@@ -21,7 +19,6 @@
   "id": 3,
   "name": "Akita",
   "price": 2800.00,
-  "image_url": "http://placekitten.com/500",
   "short_description": "Minimalistic wool coat",
   "description": "A minimalistic wool coat with sharp cut details is a musthave this season. The  oversize coat AKITA holds you warm and stylish with its soft boucle wool and mohair blend. Go for a edgy look by adding a pair of long fringde leathergloves.",
   "additional_info": [["Color","BLACK"],["Material","38% acrylic, 31% wool, 17% mohair, 12% polyamid, 2% elastan"],["Delivery time","1-3 days"]]
@@ -30,7 +27,6 @@
   "id": 4,
   "name": "Mariaa",
   "price": 1200.00,
-  "image_url": "http://placekitten.com/500",
   "short_description": "Loose fit skirt",
   "description": "Go short this winter with the sporty loose fit skirt MARIAA in fine crepe with zipper side pockets. The skirt is unique with a shorter lenght at the front. Perfect for a casual day look or a special christmas occasion.",
   "additional_info": [["Color","BLACK"],["Material","70% Rayon, 15% Cotton, 15% Polyester"],["Delivery time","1-3 days"]]
@@ -39,7 +35,6 @@
   "id": 5,
   "name": "Futures",
   "price": 800.00,
-  "image_url": "http://placekitten.com/500",
   "short_description": "Wool blend jacket",
   "description": "Stand out with the futuristic wool blend jacket FUTURES in shiny prussian blue and side zipper pockets. Create a cool minimalistic trendy look with a oversize shirt and crepe pants. Add a pair of high heels for a finishing touch.",
   "additional_info": [["Color","BLUE"],["Material","47% acrylic, 24% polyester, 19% wool, 5% polyamid, 5% other fibers"],["Delivery time","1-3 days"]]

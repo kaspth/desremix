@@ -2,6 +2,11 @@
 
 include_once 'json_helper.php';
 
+function product_image_tag($product) {
+  $path = strtolower($product['name']);
+  return "<img src=\"assets/products/{$path}.jpg\" alt=\"{$product['name']}\">";
+}
+
 function fetch_products() {
   return read_json(products_path());
 }
