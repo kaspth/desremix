@@ -34,5 +34,14 @@
   "short_description": "Loose fit skirt",
   "description": "Go short this winter with the sporty loose fit skirt MARIAA in fine crepe with zipper side pockets. The skirt is unique with a shorter lenght at the front. Perfect for a casual day look or a special christmas occasion.",
   "additional_info": [["Color","BLACK"],["Material","70% Rayon, 15% Cotton, 15% Polyester"],["Delivery time","1-3 days"]]
+},
+{
+  "id": 5,
+  "name": "Futures",
+  "price": 800.00,
+  "image_url": "http://placekitten.com/500"
+  "short_description": "Wool blend jacket",
+  "description": "Stand out with the futuristic wool blend jacket FUTURES in shiny prussian blue and side zipper pockets. Create a cool minimalistic trendy look with a oversize shirt and crepe pants. Add a pair of high heels for a finishing touch.",
+  "additional_info": [["Color","BLUE"],["Material","47% acrylic, 24% polyester, 19% wool, 5% polyamid, 5% other fibers"],["Delivery time","1-3 days"]]
 }
 ]

@@ -2,8 +2,7 @@ require 'mechanize'
 require 'json'
 
 base = "http://www.designersremix.com/dk/"
-urls = ["tilda-coat-7012.html", "marley-dress-13075.html", "akita-coat-6941.html", "mariaa-skirt-7102.html"]
-
+urls = ["tilda-coat-7012.html", "marley-dress-13075.html", "akita-coat-6941.html", "mariaa-skirt-7102.html", "futures-jacket-346.html"]
 agent = Mechanize.new { |a| a.user_agent = 'Mac Safari' }
 results = []
 
