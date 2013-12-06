@@ -82,6 +82,12 @@ body {
   padding: 6px;
 }
 
+section.main {
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+}
+
 table {
   margin: 20px 0;
 }
@@ -125,6 +131,7 @@ button:hover {
 
 section.sidebar {
   float: right;
+  width: 200px;
   border-left: 1px #3d3d3d solid;
   padding: 30px;
 }
@@ -158,30 +165,6 @@ footer li, footer p {
 
 footer a {
   color: inherit;
-}
-
-.hidden {
-  display: none;
-}
-
-.forward-redirect, .back-redirect {
-  color: inherit;
-  display: block;
-  padding: 5px;
-}
-
-.forward-redirect::after {
-  content: "→";
-  display: inline-block;
-  position: relative;
-  left: 5px;
-}
-
-.back-redirect::before {
-  content: "←";
-  display: inline-block;
-  position: relative;
-  right: 5px;
 }
 
 div.background {
@@ -222,10 +205,10 @@ div.background button {
 
 article.product {
   position: relative;
-  float: left;
-  width: 200px;
+  height: 400px;
+  -webkit-flex-basis: 240px;
   overflow: hidden;
-  margin: 10px 15px;
+  margin: 10px;
 }
 
 article.product a {
