@@ -39,4 +39,8 @@ $(document).ready(function() {
       $('.cart').empty().append(data);
     });
   });
+
+  $('[data-checkout-cart]').on('click', function() {
+    document.location.pathname = "checkout.php";
+  });
 });

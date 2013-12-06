@@ -16,5 +16,5 @@
       <?php echo render($cart['line_items'], 'line_item'); ?>
     </tbody>
   </table>
-  <button data-empty-cart>Empty cart</button>  <button href="checkout.php">Checkout</button>
+  <button data-empty-cart>Empty cart</button>  <button data-checkout-cart>Checkout</button>
 <?php } ?>
