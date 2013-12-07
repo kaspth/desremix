@@ -238,3 +238,56 @@ section.product button {
 fieldset label {
   display: block;
 }
+
+section.receipt {
+  position: relative;
+  text-align: center;
+  font-size: 120%;
+  margin: 50px 20px 20px;
+}
+
+section.receipt header h1 {
+  position: relative;
+  top: -110px;
+  color: #fff;
+}
+
+section.receipt header h1 em {
+  display: block;
+  font-style: oblique;
+  font-size: 150%;
+}
+
+#heart {
+  width: 140px;
+  height: 120px;
+  margin: 0 auto;
+  z-index: -1;
+  -webkit-transform: scale(1.6);
+}
+
+#heart:before, #heart:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 70px;
+  height: 115px;
+  background-color: #d87e76;
+  border-radius: 50px 50px 0 0;
+}
+
+#heart:before {
+  left: 70px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+#heart:after {
+  left: 0px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}

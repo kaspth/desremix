@@ -40,4 +40,8 @@ function create_cart() {
   return $cart;
 }
 
+function destroy_cart() {
+  $_SESSION['cart'] = null;
+}
+
 ?>
