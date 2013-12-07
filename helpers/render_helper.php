@@ -42,9 +42,5 @@ function is_numeric_array($array) {
 
   $keys = array_keys($array);
   return ($keys === array_keys($keys));
-  // for (reset($array), $i = 0; $i < count($array); next($array), $i++)
-  //   if ($i !== key($array)) return false;
-  //
-  // return true;
 }
 ?>
