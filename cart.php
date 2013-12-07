@@ -13,5 +13,12 @@ if (isset($_POST['product_id'])) {
   return;
 }
 
+if ($_SERVER['REQUEST_METHOD'] == "DELETE") {
+  $product = fetch_product_by_id($_REQUEST['product_id']);
+  remove_product_from_current_cart($product);
+  header("Status: 200");
+  return;
+}
+
 echo render(current_cart(), 'cart');
 ?>

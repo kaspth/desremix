@@ -15,6 +15,16 @@ function total_cart_amount($cart) {
   }, 0.0);
 }
 
+function remove_product_from_current_cart($product) {
+  $cart = current_cart();
+  foreach ($cart['line_items'] as $index => $line_item) {
+    if ($line_item['product_id'] == $product['id']) {
+      unset($cart['line_items'][$index]);
+      return;
+    }
+  }
+}
+
 function cart_is_empty($cart) {
   return empty($cart['line_items']);
 }

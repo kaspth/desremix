@@ -40,4 +40,17 @@ $(document).ready(function() {
   $('.cart').on('click', '[data-checkout-cart]', function() {
     document.location.pathname = "checkout.php";
   });
+
+  $('.cart').on('click', '[data-remove-line-item]', function() {
+    var row = $(this).closest('tr');
+    var id = row.data('product-id');
+
+    $.ajax('cart.php', {
+      method: 'DELETE',
+      data: { 'product_id': id },
+      success: function() {
+        row.remove();
+      }
+    })
+  });
 });

@@ -10,6 +10,7 @@
       <th>Pieces</th>
       <th>Name</th>
       <th>Price</th>
+      <th></th>
     </thead>
 
     <tbody>
