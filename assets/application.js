@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     $.post('cart.php', { 'product_id': id }, function(update) {
       var affectedLineItem = function() {
-        return $('.cart tbody').find('tr').eq(update.updatedLineItemIndex);
+        return $('.cart').find('tr[data-product-id=' + id + ']');
       };
 
       switch (update.cartUpdateType) {
@@ -25,9 +25,6 @@ $(document).ready(function() {
           break;
         case 'update':
           affectedLineItem().replaceWith(update.html);
-          break;
-        case 'remove':
-          affectedLineItem().remove();
           break;
       }
     }, 'json');
