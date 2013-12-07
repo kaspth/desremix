@@ -5,5 +5,5 @@
     <li><a href="terms.php">Brugervilkår</a></li>
   </ul>
 
-  <p class="copyright">&copy; Designers Remix 2013</p>
+  <p class="copyright">&copy; Designers Remix 2002-2014</p>
 </footer>
