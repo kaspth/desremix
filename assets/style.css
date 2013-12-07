@@ -234,3 +234,7 @@ section.product p {
 section.product button {
   float: right;
 }
+
+fieldset label {
+  display: block;
+}

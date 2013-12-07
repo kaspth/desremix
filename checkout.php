@@ -9,6 +9,10 @@ $cart = current_cart();
 if (cart_is_empty($cart))
   header("Location: index.php");
 
+$order_id = rand(1000, 100000);
+$amount = dibs_appropriate_cart_amount($cart);
+$accept_url = "http://{$_SERVER[HTTP_HOST]}/receipt.php";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,22 +47,38 @@ if (cart_is_empty($cart))
           <fieldset>
             <legend>Contactinformation</legend>
 
-            <label for="first_name">First name:</label>
-            <input id="first_name" name="first_name" type="text" required="required">
-            <label for="last_name">Last name:</label>
-            <input id="last_name" name="last_name" type="text" required="required">
+            <ul>
+              <li>
+                <label for="first_name">First name</label>
+                <input id="first_name" name="first_name" type="text" required="required">
+              </li>
+              <li>
+                <label for="last_name">Last name</label>
+                <input id="last_name" name="last_name" type="text" required="required">
+              </li>
 
-            <label for="email">Email:</label>
-            <input id="email" name="email" type="text" required="required">
-            <label for="phone_number">Phone number:</label>
-            <input id="phone_number" name="phone_number" type="text" required="required">
+              <li>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text" required="required">
+              </li>
+              <li>
+                <label for="phone_number">Phone number</label>
+                <input id="phone_number" name="phone_number" type="text" required="required">
+              </li>
 
-            <label for="street_name">Street name:</label>
-            <input id="street_name" name="street_name" type="text" required="required">
-            <label for="zipcode">Zipcode:</label>
-            <input id="zipcode" name="zipcode" type="text" required="required">
-            <label for="city">City:</label>
-            <input id="city" name="city" type="text" required="required">
+              <li>
+                <label for="street_name">Street name</label>
+                <input id="street_name" name="street_name" type="text" required="required">
+              </li>
+              <li>
+                <label for="zipcode">Zipcode</label>
+                <input id="zipcode" name="zipcode" type="text" required="required">
+              </li>
+              <li>
+                <label for="city">City</label>
+                <input id="city" name="city" type="text" required="required">
+              </li>
+            </ul>
           </fieldset>
         </form>
 
