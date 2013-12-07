@@ -40,7 +40,7 @@ $(document).ready(function() {
     });
   });
 
-  $('[data-checkout-cart]').on('click', function() {
+  $('.cart').on('click', '[data-checkout-cart]', function() {
     document.location.pathname = "checkout.php";
   });
 });
