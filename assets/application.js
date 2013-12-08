@@ -11,9 +11,6 @@ $(document).ready(function() {
 
     $.post('cart.php', { 'product_id': id }, function(update) {
       var cart = $('.cart');
-      var affectedLineItem = function() {
-        return cart.find('tr[data-product-id=' + id + ']');
-      };
 
       switch (update.cartUpdateType) {
         case 'add':
@@ -24,17 +21,15 @@ $(document).ready(function() {
 
           break;
         case 'update':
-          affectedLineItem().replaceWith(update.html);
+          cart.find('tr[data-product-id="' + id + '"]').replaceWith(update.html);
           break;
       }
 
       cart.find('tfoot tr').replaceWith(update.totalPriceHtml);
-    
     }, 'json');
   });
 
-  $('.cart').on('click', '[data-empty-cart]', function(e) {
-    e.preventDefault();
+  $('.cart').on('click', '[data-empty-cart]', function() {
     $.post('cart.php', { 'empty': true }, function(data) {
       $('.cart').empty().append(data);
     });
