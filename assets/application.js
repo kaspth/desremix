@@ -10,13 +10,13 @@ $(document).ready(function() {
     var id = $(this).closest('.product').data('id');
 
     $.post('cart.php', { 'product_id': id }, function(update) {
+      var cart = $('.cart');
       var affectedLineItem = function() {
-        return $('.cart').find('tr[data-product-id=' + id + ']');
+        return cart.find('tr[data-product-id=' + id + ']');
       };
 
       switch (update.cartUpdateType) {
         case 'add':
-          var cart = $('.cart');
           if (cart.find('tbody').length === 0)
             cart.load('cart.php');
           else
@@ -27,6 +27,9 @@ $(document).ready(function() {
           affectedLineItem().replaceWith(update.html);
           break;
       }
+
+      cart.find('tfoot tr').replaceWith(update.totalPriceHtml);
+    
     }, 'json');
   });
 

@@ -4,10 +4,11 @@ include_once 'render_helper.php';
 include_once 'line_items_helper.php';
 include_once 'cart_helper.php';
 
-function build_json_response($type, $line_item) {
+function build_json_response($type, $line_item, $total_amount) {
   $response = array(
     'cartUpdateType' => $type,
-    'html' => render_inline($line_item, 'line_item')
+    'html' => render_inline($line_item, 'line_item'),
+    'totalPriceHtml' => render_inline($total_amount, 'amount')
   );
   return json_encode($response);
 }
@@ -29,7 +30,8 @@ function json_response_for_product($product) {
   $cart['line_items'] = $line_items;
   update_cart($cart);
 
-  return build_json_response($type, $line_item);
+  $amount = total_cart_amount($cart);
+  return build_json_response($type, $line_item, $amount);
 }
 
 function increment_or_create_item($item, $product) {
