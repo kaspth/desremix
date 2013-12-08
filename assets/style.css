@@ -231,11 +231,35 @@ section.product p {
   margin: 20px 0;
 }
 
-section.product button {
+section.product button, section.order,
+section.order input[type="submit"] {
   float: right;
 }
 
+section.checkout {
+  width: 60%;
+  margin: 20px auto;
+}
+
 fieldset label {
+  display: block;
+}
+
+fieldset legend {
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+form ul {
+  margin: 20px 0;
+}
+
+form ul li {
+  padding: 4px 0;
+  display: inline-block;
+}
+
+form ul li#street-name {
   display: block;
 }
 

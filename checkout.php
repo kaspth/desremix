@@ -24,9 +24,13 @@ $accept_url = "http://{$_SERVER[HTTP_HOST]}/receipt.php";
     <?php include 'includes/header.php'; ?>
 
     <div class="container">
-      <section class="main">
+      <section class="checkout">
 
         <section class="order">
+          <header>
+            <h1>Your order</h1>
+          </header>
+
           <table>
             <thead>
               <th>Pieces</th>
@@ -38,7 +42,7 @@ $accept_url = "http://{$_SERVER[HTTP_HOST]}/receipt.php";
               <?php echo render($cart['line_items'], 'line_item'); ?>
             </tbody>
           </table>
-          <input type="submit" form="checkout">
+          <input type="submit" form="checkout" value="Pay for order">
         </section>
 
         <form id="checkout" method="post" action="https://payment.architrade.com/paymentweb/start.action">
@@ -66,17 +70,21 @@ $accept_url = "http://{$_SERVER[HTTP_HOST]}/receipt.php";
                 <label for="last_name">Last name</label>
                 <input id="last_name" name="last_name" type="text" required="required">
               </li>
+            </ul>
 
+            <ul>
               <li>
                 <label for="email">Email</label>
-                <input id="email" name="email" type="text" required="required">
+                <input id="email" name="email" type="email" required="required">
               </li>
               <li>
                 <label for="phone_number">Phone number</label>
-                <input id="phone_number" name="phone_number" type="text" required="required">
+                <input id="phone_number" name="phone_number" type="tel" required="required">
               </li>
+            </ul>
 
-              <li>
+            <ul>
+              <li id="street-name">
                 <label for="street_name">Street name</label>
                 <input id="street_name" name="street_name" type="text" required="required">
               </li>
