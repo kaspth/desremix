@@ -95,7 +95,11 @@ tbody tr:hover {
   background-color: #3d3d3d;
 }
 
-th {
+tfoot {
+  border-top: 2px solid #3d3d3d;
+}
+
+thead {
   border-bottom: 2px solid #3d3d3d;
   text-align: left;
 }
@@ -108,7 +112,7 @@ td:first-child {
   text-align: center;
 }
 
-button {
+button, input[type="submit"] {
   padding: 6px 10px;
   background-color: transparent;
   color: #3d3d3d;
@@ -118,7 +122,7 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
   color: #fafafa;
   background-color: #3d3d3d;
 }
@@ -130,7 +134,7 @@ section.sidebar {
   padding: 30px;
 }
 
-section.sidebar h1 {
+section.sidebar h1, section.order h1 {
   font-size: 170%;
   font-weight: bold;
 }
@@ -247,7 +251,8 @@ fieldset label {
 
 fieldset legend {
   font-weight: bold;
-  padding: 20px 0;
+  font-size: 130%;
+  padding: 0 0 10px;
 }
 
 form ul {
