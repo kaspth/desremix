@@ -41,6 +41,10 @@ $accept_url = "http://{$_SERVER[HTTP_HOST]}/receipt.php";
             <tbody>
               <?php echo render($cart['line_items'], 'line_item'); ?>
             </tbody>
+
+            <tfoot>
+              <?php echo render(total_cart_amount($cart), 'amount'); ?>
+            </tfoot>
           </table>
           <input type="submit" form="checkout" value="Pay for order">
         </section>
