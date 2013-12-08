@@ -5,8 +5,7 @@ $(document).ready(function() {
     $(this).find('[data-hover-show]').fadeToggle(200);
   });
 
-  $('[data-add-to-cart]').on('click', function(e) {
-    e.preventDefault();
+  $('[data-add-to-cart]').on('click', function() {
     var id = $(this).closest('.product').data('id');
 
     $.post('cart.php', { 'product_id': id }, function(update) {
