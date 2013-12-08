@@ -18,7 +18,8 @@ function json_response_for_product($product) {
   $line_items = $cart['line_items'];
 
   $index = line_items_has_product($line_items, $product);
-  $line_item = increment_or_create_item($line_items[$index], $product);
+  $line_item = isset($index) ? $line_items[$index] : null;
+  $line_item = increment_or_create_item($line_item, $product);
   if (isset($index)) {
     $line_items[$index] = $line_item;
     $type = 'update';

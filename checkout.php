@@ -11,7 +11,7 @@ if (cart_is_empty($cart))
 
 $order_id = rand(1000, 100000);
 $amount = dibs_appropriate_cart_amount($cart);
-$accept_url = "http://{$_SERVER[HTTP_HOST]}/receipt.php";
+$accept_url = "http://{$_SERVER['HTTP_HOST']}/receipt.php";
 
 ?>
 <!DOCTYPE html>
@@ -33,9 +33,11 @@ $accept_url = "http://{$_SERVER[HTTP_HOST]}/receipt.php";
 
           <table>
             <thead>
-              <th>Pieces</th>
-              <th>Name</th>
-              <th>Price</th>
+              <tr>
+                <th>Pieces</th>
+                <th>Name</th>
+                <th>Price</th>
+              </tr>
             </thead>
 
             <tbody>

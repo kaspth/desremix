@@ -7,9 +7,11 @@
 <?php } else { ?>
   <table>
     <thead>
-      <th>Pieces</th>
-      <th>Name</th>
-      <th>Price</th>
+      <tr>
+        <th>Pieces</th>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
     </thead>
 
     <tbody>
