@@ -1,3 +1,6 @@
 # Create values needed for validation, like:
 #   product:
 #    :id: 1
+
+product:
+  :id: 1
