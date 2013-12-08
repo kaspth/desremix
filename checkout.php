@@ -27,7 +27,17 @@ $accept_url = "http://{$_SERVER[HTTP_HOST]}/receipt.php";
       <section class="main">
 
         <section class="order">
-          <?php echo render($cart, 'cart'); ?>
+          <table>
+            <thead>
+              <th>Pieces</th>
+              <th>Name</th>
+              <th>Price</th>
+            </thead>
+
+            <tbody>
+              <?php echo render($cart['line_items'], 'line_item'); ?>
+            </tbody>
+          </table>
           <input type="submit" form="checkout">
         </section>
 
