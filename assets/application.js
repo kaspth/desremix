@@ -2,7 +2,9 @@ $(document).ready(function() {
   $('[data-hover-show]').hide();
 
   $('[data-hover-effect]').hover(function() {
-    $(this).find('[data-hover-show]').fadeToggle(200);
+    $(this).find('[data-hover-show]').stop().fadeIn(200);
+  }, function() {
+    $(this).find('[data-hover-show]').stop().fadeOut(200);
   });
 
   $('[data-add-to-cart]').on('click', function() {
