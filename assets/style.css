@@ -50,6 +50,7 @@
 
 .container:after {
   clear: both;
+  height: 20px;
 }
 
 /* global styles */
@@ -69,17 +70,22 @@ html {
 body {
   font: 16px "Avenir", "Helvetica";
   color: #333;
-  margin: 0 0 80px; /* match footer height */
-}
-
-.logo img {
-  height: 100%;
+  width: 1024px;
+  margin: 0 auto 80px; /* match footer height */
 }
 
 #application-header {
   position: relative;
-  height: 54px;
-  padding: 6px;
+  height: 200px;
+  background-color: #ececec;
+}
+
+#application-header img {
+  width: 960px;
+}
+
+div.container {
+  margin: 20px 0;
 }
 
 table {
@@ -131,7 +137,7 @@ section.sidebar {
   float: right;
   min-width: 210px;
   border-left: 1px #3d3d3d solid;
-  padding: 30px;
+  padding: 10px;
 }
 
 section.sidebar h1, section.order h1 {
@@ -201,7 +207,7 @@ article.product {
   height: 400px;
   -webkit-flex-basis: 240px;
   overflow: hidden;
-  margin: 10px;
+  margin: 2px;
 }
 
 article.product a {
