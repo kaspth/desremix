@@ -11,9 +11,9 @@ function render($objects, $partial_name, $null_function = null) {
     return isset($null_function) ? $null_function() : false;
 
   if (is_numeric_array($objects))
-    return render_collection($objects, $partial_name, $null_function);
+    return render_collection($objects, $partial_name);
 
-  return render_member($objects, $partial_name, $null_function);
+  return render_member($objects, $partial_name);
 }
 
 function render_collection($objects, $partial_name) {
