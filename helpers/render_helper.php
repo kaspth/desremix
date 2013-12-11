@@ -4,7 +4,7 @@ const PARTIALS_DIR = 'includes/';
 const PARTIALS_PREFIX = '_';
 
 # First argument is the object or objects to render
-# Second is the name of the partial to render
+# Second argument is the name of the partial to render
 # Third argument is a function to run if there are no $objects to render
 function render($objects, $partial_name, $null_function = null) {
   if (!isset($objects))
