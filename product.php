@@ -32,7 +32,7 @@ $cart = current_cart();
             </header>
 
             <p><?php echo $product["description"]; ?></p>
-            <button data-add-to-cart>Læg i kurv</button>
+            <button data-add-to-cart>Add to cart</button>
           </div>
         </section>
       </section>
