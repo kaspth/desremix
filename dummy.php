@@ -1,13 +1,8 @@
-<?php
-include_once 'helpers/cart_helper.php';
-
-destroy_cart();
-?>
 <!DOCTYPE html>
 <html>
   <head>
     <?php include 'includes/head.php'; ?>
-    <title>Thanks for purchasing - Designers Remix</title>
+    <title>Dummy page - Designers Remix</title>
   </head>
   <body>
     <?php include 'includes/header.php'; ?>
@@ -16,8 +11,8 @@ destroy_cart();
       <section class="main">
         <section class="heart">
           <?php include 'includes/heart.php'; ?>
-          <p>You've just bought something from us.</p>
-          <p>Yes, we think you're pretty great.</p>
+          <p>We're still working on this page.</p>
+          <p>That doesn't mean we don't love you, though.</p>
         </section>
       </section>
     </div>

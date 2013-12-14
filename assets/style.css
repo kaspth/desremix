@@ -291,20 +291,20 @@ form ul li#street-name {
   display: block;
 }
 
-section.receipt {
+section.heart {
   position: relative;
   text-align: center;
   font-size: 120%;
   margin: 50px 20px 20px;
 }
 
-section.receipt header h1 {
+section.heart header h1 {
   position: relative;
   top: -110px;
   color: #fff;
 }
 
-section.receipt header h1 em {
+section.heart header h1 em {
   display: block;
   font-style: oblique;
   font-size: 150%;
