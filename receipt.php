@@ -15,10 +15,7 @@ destroy_cart();
     <div class="container">
       <section class="main">
         <section class="receipt">
-          <div id="heart"></div>
-          <header>
-            <h1>Hello <em>you</em></h1>
-          </header>
+          <?php include 'includes/heart.php'; ?>
           <p>You've just bought something from us.</p>
           <p>Yes, we think you're pretty great.</p>
         </section>
