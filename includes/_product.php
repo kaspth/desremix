@@ -3,7 +3,7 @@
     <?php echo product_image_tag($product); ?>
   </a>
   <div class="background">
-    <button data-add-to-cart>Læg i kurv</button>
+    <button data-add-to-cart>Add to cart</button>
     <h3><?php echo $product["name"]; ?></h3>
     <em>DKK <?php echo $product["price"]; ?></em>
   </div>
