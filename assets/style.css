@@ -88,6 +88,23 @@ div.container {
   margin: 20px 0;
 }
 
+section.index {
+  position: relative;
+  width: 1024px;
+  height: 768px;
+  margin: 0 auto;
+}
+
+section.index a {
+  position: absolute;
+  bottom: 100px;
+  font-size: 220%;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: center;
+  color: inherit;
+}
+
 table {
   margin: 20px 0;
 }
