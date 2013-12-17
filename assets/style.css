@@ -55,11 +55,11 @@
 
 /* global styles */
 /* Color values:
-  green: #c2e2d3;
-  blue: #8789b2;
-  red: #d87e76;
-  gray: #727272;
-  black: #3d3d3d;
+  green: #b6e297;
+  blue: #a5e2d3;
+  red: #d26176;
+  orangeish: #ff9c8f;
+  black: #616870;
 */
 /* http://mystrd.at/modern-clean-css-sticky-footer/ */
 html {
@@ -115,15 +115,15 @@ tbody tr {
 
 tbody tr:hover {
   color: #fafafa;
-  background-color: #3d3d3d;
+  background-color: #616870;
 }
 
 tfoot {
-  border-top: 2px solid #3d3d3d;
+  border-top: 2px solid #616870;
 }
 
 thead {
-  border-bottom: 2px solid #3d3d3d;
+  border-bottom: 2px solid #616870;
   text-align: left;
 }
 
@@ -138,8 +138,8 @@ td:first-child {
 button, input[type="submit"] {
   padding: 6px 10px;
   background-color: transparent;
-  color: #3d3d3d;
-  border: 1px solid #3d3d3d;
+  color: #616870;
+  border: 1px solid #616870;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -147,13 +147,13 @@ button, input[type="submit"] {
 
 button:hover, input[type="submit"]:hover {
   color: #fafafa;
-  background-color: #3d3d3d;
+  background-color: #616870;
 }
 
 section.sidebar {
   float: right;
   min-width: 210px;
-  border-left: 1px #3d3d3d solid;
+  border-left: 1px #616870 solid;
   padding: 10px;
 }
 
@@ -176,7 +176,7 @@ footer {
   font-size: 80%;
   text-align: center;
   color: #eee;
-  background-color: #3d3d3d;
+  background-color: #616870;
 }
 
 footer li, footer p {
@@ -204,7 +204,7 @@ div.background * {
 }
 
 div.background button:hover {
-  background-color: #8789b2;
+  background-color: #ff9c8f;
 }
 
 div.background button {
@@ -324,7 +324,7 @@ section.heart header h1 em {
   top: 0;
   width: 70px;
   height: 115px;
-  background-color: #d87e76;
+  background-color: #d26176;
   border-radius: 50px 50px 0 0;
 }
 
